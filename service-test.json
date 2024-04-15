@@ -1,0 +1,22 @@
+{
+    "flow": {
+      "id": "stp-s2-test",
+      "priority": 200,
+      "table_id": 0,
+      "match": {
+        "ethernet-match": {"ethernet-type": {"type": 2048}},
+        "ipv4-source": "10.0.0.4/8"
+      },
+      "instructions": {
+        "instruction": [{
+          "order": 0,
+          "apply-actions": {
+            "action": [{
+              "order": 0,
+              "output-action": { "output-node-connector": "openflow:2:1" }
+            }]
+          }
+        }]
+      }
+    }
+}

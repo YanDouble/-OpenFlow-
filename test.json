@@ -1,0 +1,21 @@
+{
+    "flow": {
+      "id": "stp-user1-ip",
+      "priority": 200,
+      "table_id": 0,
+      "match": {
+        "ethernet-match": {"ethernet-type": {"type": 2048}, "ethernet-source": {"address": "e2:ff:e0:3b:d8:76"}}
+      },
+      "instructions": {
+        "instruction": [{
+          "order": 0,
+          "apply-actions": {
+            "action": [{
+              "order": 0,
+              "output-action": { "output-node-connector": "openflow:2:1" }
+            }]
+          }
+        }]
+      }
+    }
+}
